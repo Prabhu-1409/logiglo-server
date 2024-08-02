@@ -1,0 +1,273 @@
+//Replay API's
+
+###
+//Crete replay
+POST http://localhost:3001/createReply
+Content-Type: application/json
+
+{
+  "account_id": 4,
+  "business_account_id": 3135,
+  "text": "Arriving",
+  "post_id": 1,
+  "created_at": "2023-07-17",
+  "last_modified_by": 2,
+  "last_mod_bus": 4321,
+  "last_modified_at": "2023-07-17"
+}
+
+
+
+
+###
+// Get All Replies for User based on post_id
+GET https://test.logiglo.com/api/getReplies/77
+
+
+###
+GET http://localhost:3001/api/getMobileThemeSettings
+###
+GET https://test.logiglo.com/api/getAdsData
+
+###
+GET http://localhost:3001/api/getFeatureStatus?feature=linkedIn_signup
+
+
+###
+PUT http://test.logiglo.com/api/updateTestimonialSectionActivation/1
+Content-Type: application/json
+
+{
+  "testimonialStatus": false
+}
+
+###
+GET http://localhost:3001/replyCount/28
+
+###
+GET http://localhost:3001/api/usersCount
+
+
+###
+
+GET http://localhost:3001/api/careersSection
+
+###
+// Update Reply based on reply_id, presentText, updatedText
+PUT http://localhost:3001/updateReply/11
+Content-Type: application/json
+
+{
+  "presentText": "ok...",
+  "updatedText": "Contact"
+}
+
+
+
+###
+
+
+
+// Delete Reply based on id(l_reply)
+DELETE http://localhost:3001/deleteReply/20
+
+
+
+
+
+
+
+###
+
+
+
+
+
+
+
+
+
+
+// POST API's
+
+###
+// Create Post
+POST http://localhost:3001/createPost
+Content-Type: application/json
+
+{
+  "account_id": 3,
+  "bus_acc_id": 4135,
+  "title": "Electronics",
+  "text": "Handle with care",
+  "created_at": "2023-07-14",
+  "last_modified": "2023-07-14",
+  "last_modified_by": 7,
+  "last_mod_by_bus": 1234
+}
+
+
+###
+// Get all Posts in l_post table
+GET http://localhost:3001/api/getAllPosts
+
+
+
+###
+// Get Posts by account_id
+GET http://localhost:3001/api/getPosts/158
+
+
+
+###
+// Get Post by id(post)
+GET http://localhost:3001/getPost/5
+
+
+
+
+
+
+###
+// Update Post(id)
+PUT http://localhost:3001/updatePost/5
+Content-Type: application/json
+
+{
+  "account_id": 3,
+  "bus_acc_id": 5135,
+  "title": "Electric",
+  "text": "Handle with care",
+  "created_at": "2023-07-13",
+  "last_modified": "2023-07-13",
+  "last_modified_by": 7,
+  "last_mod_by_bus": 1234
+}
+
+
+
+###
+
+
+
+
+
+
+
+
+//USER API's
+###
+// User Signup
+POST http://localhost:3001/createUser
+Content-Type: application/json
+
+{
+  "email": "mmohan123@gmail.com",
+  "password": "john@3",
+  "first_name": "John",
+  "last_name": "sam",
+  "isd_code": 91,
+  "phone_number": 9848022188,
+  "address_line_1": "Tilak nagar",
+  "address_line_2": "MP",
+  "country_id": 1,
+  "state_id": 2,
+  "pin_code": 533101
+}
+
+
+###
+
+
+
+// User Login
+POST http://localhost:3001/loginUser
+Content-Type: application/json
+
+{
+  "email": "Jayprakash@gmail.com",
+  "password": "prakash@123"
+}
+
+
+
+
+###
+
+
+
+
+
+
+// Update User
+PUT http://localhost:3001/updateUser/18
+Content-Type: application/json
+
+{
+  "email": "Jayprakash@gmail.com",
+  "password": "prakash@123",
+  "verified": 1,
+  "first_name": "Jay",
+  "last_name": "prakash",
+  "isd_code": 91,
+  "phone_number": 9848022188,
+  "address_line_1": "Gujrat City",
+  "address_line_2": "Gujrat",
+  "country_id": 1,
+  "state_id": 2,
+  "pin_code": 533101
+}
+
+
+
+###
+
+
+
+
+// Delete User
+DELETE http://localhost:3001/deleteUser/33
+
+
+
+
+
+###
+// Get Post Categories
+GET http://localhost:3001/getCategoryNames/10
+
+
+
+###
+// Get Post Categories
+GET http://localhost:3001/GetUserNames
+
+
+
+###
+//Reset Password
+Post http://localhost:3001/api/resetPassword
+Content-Type: application/json
+
+{
+  "email": "gopal555@gmail.com",
+  "oldPassword" : "gopalA",
+  "newPassword": "gopalB",
+  "confirmPassword" : "gopalB"
+}
+
+
+###
+Put http://localhost:3001/api/removeAdSubscription/16
+
+
+
+###
+POST http://localhost:3001/api/sendPasswordResetEmail
+Content-Type: application/json
+
+{
+  "email": "saitejamacha369@gmail.com"
+}
+
+
